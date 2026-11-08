@@ -1,0 +1,9 @@
+name: dev-typescript
+version: 1.0.0
+description: "TypeScript practices on top of dev-core: strict types and validation at the edges."
+includes: auto
+dependencies:
+  apm:
+    - git: "https://github.com/saulmoro/workshop-coe-cdn.git"
+      path: "packages/common"
+      ref: "^1.0.0"

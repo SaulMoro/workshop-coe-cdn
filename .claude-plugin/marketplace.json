@@ -1,0 +1,38 @@
+{
+  "name": "cdn-taller",
+  "owner": {
+    "name": "AI CoE · formación"
+  },
+  "plugins": [
+    {
+      "name": "dev-typescript",
+      "description": "TypeScript practices on top of dev-core: strict types and validation at the edges.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/saulmoro/workshop-coe-cdn.git",
+        "path": "packages/dev-typescript",
+        "ref": "^1.0.0"
+      }
+    },
+    {
+      "name": "front-react",
+      "description": "Agent context for React applications built with Vite.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/saulmoro/workshop-coe-cdn.git",
+        "path": "packages/front-react",
+        "ref": "^1.0.0"
+      }
+    },
+    {
+      "name": "asset-kit",
+      "description": "Tools to write and review the assets of a set before they reach the vault.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/saulmoro/workshop-coe-cdn.git",
+        "path": "packages/asset-kit",
+        "ref": "^1.0.0"
+      }
+    }
+  ]
+}

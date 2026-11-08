@@ -1,0 +1,4 @@
+name: common
+version: 1.0.0
+description: "Context that helps with any agent task, whatever the stack."
+includes: auto

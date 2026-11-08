@@ -1,0 +1,9 @@
+name: asset-kit
+version: 1.0.0
+description: "Tools to write and review the assets of a set before they reach the vault."
+includes: auto
+dependencies:
+  apm:
+    - git: "https://github.com/saulmoro/workshop-coe-cdn.git"
+      path: "packages/common"
+      ref: "^1.0.0"

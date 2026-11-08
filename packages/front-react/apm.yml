@@ -1,5 +1,5 @@
 name: front-react
-version: 1.0.0
+version: 1.1.0
 description: "Agent context for React applications built with Vite."
 includes: auto
 dependencies:

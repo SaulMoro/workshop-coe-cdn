@@ -1,0 +1,31 @@
+# Vuelve a construir los paquetes desde el commit del vault que fija packaging.json
+# y comprueba que salen idénticos a lo versionado. Después, tools/check.sh.
+# Lo mismo en cada etiqueta publicada: lo que instaló alguien sigue siendo reproducible.
+name: check
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Clona el vault
+        run: |
+          git clone --quiet "$(jq -r .vault.repo packaging.json)" "$RUNNER_TEMP/vault"
+          git -C "$RUNNER_TEMP/vault" fetch --quiet --tags origin
+      - name: package.sh --check en el commit actual
+        run: bash tools/package.sh --vault "$RUNNER_TEMP/vault" --check
+      - name: check.sh
+        run: bash tools/check.sh
+      - name: package.sh --check en cada etiqueta
+        run: |
+          for tag in $(git tag --list); do
+            git worktree add --quiet --detach "$RUNNER_TEMP/at-$tag" "$tag"
+            echo "== $tag"
+            bash "$RUNNER_TEMP/at-$tag/tools/package.sh" --vault "$RUNNER_TEMP/vault" --check
+          done

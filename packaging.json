@@ -1,0 +1,17 @@
+{
+  "vault": {
+    "repo": "https://github.com/SaulMoro/workshop-coe-vault.git",
+    "commit": "4c76945fe39d4a5495d394d123d3b29a5e570f35"
+  },
+  "cdn": {
+    "repo": "https://github.com/saulmoro/workshop-coe-cdn.git",
+    "marketplace": "cdn-taller",
+    "owner": "AI CoE · formación"
+  },
+  "packages": [
+    { "name": "common",         "line": "common-core",    "dependsOn": [],         "listed": false },
+    { "name": "dev-typescript", "line": "dev-typescript", "dependsOn": ["common"], "listed": true },
+    { "name": "front-react",    "line": "front-react",    "dependsOn": ["common"], "listed": true },
+    { "name": "asset-kit",      "line": "asset-kit",      "dependsOn": ["common"], "listed": true }
+  ]
+}

@@ -1,0 +1,2 @@
+# Saltos de línea LF en todo: package.sh --check compara byte a byte y un .sh con CRLF no arranca.
+* text=auto eol=lf

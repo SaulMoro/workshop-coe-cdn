@@ -1,7 +1,7 @@
 {
   "vault": {
     "repo": "https://github.com/SaulMoro/workshop-coe-vault.git",
-    "commit": "4c76945fe39d4a5495d394d123d3b29a5e570f35"
+    "commit": "a25f35315b430d73759fc000b21f485b72ea5c90"
   },
   "cdn": {
     "repo": "https://github.com/saulmoro/workshop-coe-cdn.git",
